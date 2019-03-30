@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         button2.setOnClickListener {
             var i=Intent(this, SecondAct::class.java)
+            i.putExtra("name", editText2.text.toString())
             startActivity(i)
         }
     }
