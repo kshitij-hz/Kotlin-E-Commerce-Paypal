@@ -1,5 +1,7 @@
 package com.example.user.myudemyapp
 
+import android.content.Intent
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -11,11 +13,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button.setOnClickListener {
-            var x:Int = num1.text.toString().toInt()
-            var y:Int = num2.text.toString().toInt()
-            var z:Int = x + y
-            Toast.makeText(this, "The result is " + z, Toast.LENGTH_LONG).show()
+        button2.setOnClickListener {
+            var i=Intent(this, SecondAct::class.java)
+            startActivity(i)
         }
     }
 }
